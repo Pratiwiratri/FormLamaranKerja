@@ -1,5 +1,7 @@
 package id.sch.smktelkom_mlg.tugas01.xiirpl5030.formlamarankerja;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup rgStatus;
     TextView tvHasil;
     Spinner SpPendidikan;
+    String cbHasil1="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +61,31 @@ public class MainActivity extends AppCompatActivity {
     {
         if(isValid())
         {
+            String nama = etNama.getText().toString();
+            int strartlen1 = cbHasil1.length();
+            String irb;
 
+            if (cb1.isChecked()) cbHasil1 += "\t- "+cb1.getText() +"\n";
+            if (cb2.isChecked()) cbHasil1 += "\t- "+cb2.getText() +"\n";
+            if (cb3.isChecked()) cbHasil1 += "\t- "+cb3.getText() +"\n";
+            if (cb4.isChecked()) cbHasil1 += "\t- "+cb4.getText() +"\n";
+            if (cbHasil1.length()==strartlen1)
+            {
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setMessage("Anda Belum Mengisi Posisi Yang Diincar!!");
+                builder1.setCancelable(true);
+
+                builder1.setNeutralButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener(){
+                            public void onClick (DialogInterface dialog, int id){
+                                dialog.dismiss();
+                            }
+                        });
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
+
+            }
 
         }
     }
