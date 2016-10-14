@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
             }
+            else
+            {
+                tvHasil.setText("Nama Pelamar : "+nama+ "\nPendidikan Terakhir : "+SpPendidikan.getSelectedItem().toString()+ "\nLama Pengalaman Kerja : "+irb
+                        +"\nPosisi Yang Diincar : \n"+cbHasil1);
+                kondisiawal();
+            }
 
         }
     }
