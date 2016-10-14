@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/pendidikan"
-            android:id="@+id/spinnerpendidikan" />
+            android:id="@+id/SpinnerPendidikan" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +68,8 @@
         <RadioGroup
             android:layout_width="217dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.07">
+            android:layout_weight="0.07"
+            android:id="@+id/RadioGroup">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -102,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kasir"
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBox1"
             android:checked="false" />
 
         <CheckBox
@@ -127,15 +128,18 @@
             android:checked="false" />
 
         <Button
-            android:layout_width="81dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OK"
+            android:text="SUBMIT"
             android:id="@+id/buttonOK" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hasil"
+            tools:text="Hasil"
             android:id="@+id/textViewHasil" />
 
     </LinearLayout>
