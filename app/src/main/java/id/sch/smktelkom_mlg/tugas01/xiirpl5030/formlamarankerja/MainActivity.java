@@ -84,7 +84,32 @@ public class MainActivity extends AppCompatActivity {
                         });
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
+            }
+            if (rgStatus.getCheckedRadioButtonId()!= -1)
+            {
+                RadioButton rb = (RadioButton) findViewById(rgStatus.getCheckedRadioButtonId());
+                irb = rb.getText().toString();
+            }
+            else
+            {
+                irb = null;
+            }
 
+            if (irb == null)
+            {
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setMessage("Anda Belum Memilih Lama Pengalaman Kerja!!");
+                builder1.setCancelable(true);
+
+                builder1.setNeutralButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener(){
+                            public void onClick (DialogInterface dialog, int id){
+                                dialog.dismiss();
+                            }
+                        });
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
             }
 
         }
