@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         cb4 = (CheckBox) findViewById(R.id.checkBox4);
         SpPendidikan = (Spinner) findViewById(R.id.SpinnerPendidikan);
 
+
+
         kondisiawal();
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         cb4.setChecked(false);
         rgStatus.clearCheck();
         SpPendidikan.setSelection(0);
+        cbHasil1 = "";
     }
 
     private void doClick()
